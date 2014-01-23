@@ -7,8 +7,8 @@
 <body>
 
     <div class="container" ng-app="pokerApp" ng-controller="MainController">
-        <div ng-repeat="card in deck">
-            <div class="col-md-1">{{card.rank}} of {{card.color}}</div>
+        <div ng-repeat="card in deck" class="pull-left">
+            <img ng-src="{{card.img}}" alt="{{card.rank}} of {{card.color}}" class="img-thumbnail" />
         </div>
     </div>
 
