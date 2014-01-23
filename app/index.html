@@ -7,8 +7,15 @@
 <body>
 
     <div class="container" ng-app="pokerApp" ng-controller="MainController">
-        <div ng-repeat="card in deck" class="pull-left">
-            <img ng-src="{{card.img}}" alt="{{card.rank}} of {{card.color}}" class="img-thumbnail" />
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            helo
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="row" ng-repeat="group in deck | group:4">
+                <span ng-repeat="card in group" >
+                    <img ng-src="{{card.img}}" alt="{{card.rank}} of {{card.color}}" class="img-thumbnail" />
+                </span>
+            </div>
         </div>
     </div>
 
@@ -19,5 +26,6 @@
     <script src="js/controllers/mainController.js"></script>
     <script src="js/services/constants.js"></script>
     <script src="js/services/deck.js"></script>
+    <script src="js/filters/group.js"></script>
 </body>
 </html>
